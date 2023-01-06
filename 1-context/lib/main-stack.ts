@@ -13,9 +13,8 @@ export class MainStack extends cdk.Stack {
 
     const vpc = ec2.Vpc.fromLookup(this, "Vpc", {
       vpcId: props.vpcId
-    })
-    // const instanceType = ec2.InstanceType.of(ec2.InstanceClass.T3, ec2.InstanceSize.MICRO)
-    const instanceType = new ec2.InstanceType(props.instanceType)
+    });
+    const instanceType = new ec2.InstanceType(props.instanceType);
 
     new ec2.Instance(this, 'Instance', {
       vpc,

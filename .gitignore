@@ -11,3 +11,4 @@ cdk.out
 # サンプルコード実施AWSアカウント固有の情報が含まれるため除外
 cdk.json
 cdk.context.json
+dev.ts
