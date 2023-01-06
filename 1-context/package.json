@@ -1,14 +1,16 @@
 {
-  "name": "cdk-config",
+  "name": "1-context",
   "version": "0.1.0",
   "bin": {
-    "cdk-config": "bin/main.js"
+    "1-context": "bin/index.js"
   },
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "cdk:dev": "cdk -c environment=dev",
+    "cdk:prd": "cdk -c environment=prd"
   },
   "devDependencies": {
     "@types/jest": "^29.2.4",

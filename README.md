@@ -1,7 +1,8 @@
 # CDK Config実装のサンプル
 
-https://thecdkbook.com/
+[AWS CDKで複数の環境を設定する際の設定値(config)の渡し方](https://dev.classmethod.jp/etc/aws-cdk-multi-environment-config/)
 
-The CDK Book Chapter 7.1.3. Less Static-y Files相当の内容
-
-書籍内ではRDSスタックを例にしているが、とりあえずSQSスタックで
+```bash
+cp cdk.json.sample cp cdk.json
+vi cdk.json # 必要な部分(アカウントID、VPC ID)を書き換える
+```
