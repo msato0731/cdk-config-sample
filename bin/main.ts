@@ -12,7 +12,7 @@ const devEnv = { account: process.env.CDK_DEFAULT_ACCOUNT, region: process.env.C
 new SqsStack(app, 'DevSqsStack', {
   env: devEnv,
   ...devProperties,
-  // 以下の様にも書ける
+  // ...devProperties 部分は以下の様にも書ける
   // enforceSSL: devProperties.enforceSSL
 });
 
