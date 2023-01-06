@@ -1,0 +1,135 @@
+{
+  "version": "22.0.0",
+  "artifacts": {
+    "DevSqsStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "DevSqsStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "DevSqsStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://201472471660/ap-northeast-1",
+      "properties": {
+        "templateFile": "DevSqsStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::201472471660:role/cdk-hnb659fds-deploy-role-201472471660-ap-northeast-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::201472471660:role/cdk-hnb659fds-cfn-exec-role-201472471660-ap-northeast-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-201472471660-ap-northeast-1/4680701faa0a737082a680bea87e065671caae435d54487ecf4d0ae27e632a63.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "DevSqsStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::201472471660:role/cdk-hnb659fds-lookup-role-201472471660-ap-northeast-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "DevSqsStack.assets"
+      ],
+      "metadata": {
+        "/DevSqsStack/CdkConfigQueue/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CdkConfigQueue6B0D5A54"
+          }
+        ],
+        "/DevSqsStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/DevSqsStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/DevSqsStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "DevSqsStack"
+    },
+    "ProdSqsStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "ProdSqsStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "ProdSqsStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://123456789/ap-northeast-1",
+      "properties": {
+        "templateFile": "ProdSqsStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::123456789:role/cdk-hnb659fds-deploy-role-123456789-ap-northeast-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::123456789:role/cdk-hnb659fds-cfn-exec-role-123456789-ap-northeast-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-123456789-ap-northeast-1/b1243b3c679e229ebee792a14cd143821433af9e0833251284748079be01b7d5.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "ProdSqsStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::123456789:role/cdk-hnb659fds-lookup-role-123456789-ap-northeast-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "ProdSqsStack.assets"
+      ],
+      "metadata": {
+        "/ProdSqsStack/CdkConfigQueue/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CdkConfigQueue6B0D5A54"
+          }
+        ],
+        "/ProdSqsStack/CdkConfigQueue/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CdkConfigQueuePolicy4DE177FB"
+          }
+        ],
+        "/ProdSqsStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/ProdSqsStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/ProdSqsStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "ProdSqsStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
